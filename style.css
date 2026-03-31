@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    /* 🔥 FONDO MEJORADO */
+    background: linear-gradient(to top, #cce7ff, #ffffff);
+}
+
+/* ÁRBOL */
+.tree-container {
+  width: 520px !important;
+  height: 520px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.tree-container svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tree-container svg path {
+  transition: fill-opacity 0.5s, stroke-dashoffset 1.2s;
+}
+
+.tree-container svg.move-and-scale {
+  transition: transform 1.2s cubic-bezier(.77,0,.18,1);
+  transform: translateX(180px) scale(1.25);
+}
+
+/* TEXTO */
+.dedication-text {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  width: 85%;
+
+  font-size: 1.4rem;
+  color: #222;
+
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-line;
+
+  z-index: 3;
+  opacity: 0;
+
+  padding: 1em 1.2em;
+  background: rgba(255,255,255,0.9);
+
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.dedication-text.typing {
+  opacity: 1;
+}
+
+/* FIRMA */
+.signature {
+  margin-top: 1.5em;
+  font-size: 2rem;
+  color: #e60026;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.signature.visible {
+  opacity: 1;
+}
+
+/* CONTADOR */
+.countdown {
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+
+  font-size: 1.2rem;
+  color: #333;
+
+  background: rgba(255,255,255,0.8);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+
+  z-index: 6;
+  opacity: 0;
+}
+
+.countdown.visible {
+  opacity: 1;
+}
+
+/* PETALOS */
+#floating-objects {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.floating-petal {
+  position: absolute;
+  width: 20px;
+  height: 26px;
+
+  background: radial-gradient(ellipse at 60% 30%, #ffd6e0 60%, #ff69b4 100%);
+  border-radius: 60% 40% 60% 40%;
+}

@@ -1,0 +1,47 @@
+body {
+  font-size: 15px;
+}
+
+/* ÁRBOL */
+.tree-container {
+  width: 90vw !important;
+  height: 70vw !important;
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* TEXTO */
+.dedication-text {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  max-width: 95vw;
+
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* FIRMA */
+.signature {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* CONTADOR */
+.countdown {
+  bottom: 8%;
+  font-size: 0.9rem;
+  width: 85%;
+}
+
+/* PETALOS */
+.floating-petal {
+  width: 12px;
+  height: 16px;
+}
